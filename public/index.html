@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Cats APA Club</title>
+  <meta name="description" content="Caring for our campus cats - Animal Protection Association Club">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <span class="paw-icon">&#128062;</span>
+        Campus <span>Cats</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/report.html">Report</a></li>
+        <li><a href="/donate.html">Donate</a></li>
+        <li><a href="/adopt.html">Adopt</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-badge">APA Club</div>
+        <h1>Caring for Our Campus Cats</h1>
+        <p>We are a dedicated group of students committed to the welfare of the stray and community cats living on our campus. Through rescue, care, and advocacy, we make a difference&mdash;one paw at a time.</p>
+        <div class="hero-buttons">
+          <a href="/report.html" class="btn btn-primary">Report a Sighting</a>
+          <a href="/adopt.html" class="btn btn-outline">Adopt a Cat</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Cats -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Our Featured Cats</h2>
+        <p class="section-subtitle">Meet some of the beloved cats living on campus that we help care for every day.</p>
+        <div class="cats-grid" style="max-width:920px;margin-left:auto;margin-right:auto;">
+          <div class="cat-card">
+            <div class="cat-card-img" style="background: url('https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400&h=300&fit=crop') center/cover;"></div>
+            <div class="cat-card-body">
+              <div class="cat-card-name">Whiskers</div>
+              <div class="cat-card-meta">Orange Tabby &bull; 3 years old</div>
+              <p class="cat-card-desc">The friendliest cat on campus. Whiskers can often be found napping near the library entrance, greeting students with a purr.</p>
+              <div class="cat-card-tags">
+                <span class="cat-tag">Friendly</span>
+                <span class="cat-tag green">Vaccinated</span>
+              </div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-img" style="background: url('https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=400&h=300&fit=crop') center/cover;"></div>
+            <div class="cat-card-body">
+              <div class="cat-card-name">Luna</div>
+              <div class="cat-card-meta">Black &amp; White &bull; 2 years old</div>
+              <p class="cat-card-desc">A graceful lady who loves to sit on sunny benches. Luna was rescued as a kitten and has been a campus favorite ever since.</p>
+              <div class="cat-card-tags">
+                <span class="cat-tag">Shy</span>
+                <span class="cat-tag green">Spayed</span>
+              </div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-img" style="background: url('https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=400&h=300&fit=crop') center/cover;"></div>
+            <div class="cat-card-body">
+              <div class="cat-card-name">Mochi</div>
+              <div class="cat-card-meta">Calico &bull; 1 year old</div>
+              <p class="cat-card-desc">The youngest of our campus cats, Mochi is playful, curious, and always getting into mischief around the science building.</p>
+              <div class="cat-card-tags">
+                <span class="cat-tag">Playful</span>
+                <span class="cat-tag green">Vaccinated</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="meet-cats-btn-wrap">
+          <a href="/cats.html" class="btn btn-primary">Meet Our Cats</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leaders Carousel -->
+    <section class="leaders-section">
+      <div class="container">
+        <h2 class="section-title">Meet Our Leaders</h2>
+        <p class="section-subtitle">The passionate students behind Campus Cats APA Club.</p>
+        <div class="carousel-wrapper">
+          <div class="carousel-track" id="carouselTrack">
+            <div class="leader-card active" data-index="0">
+              <div class="leader-avatar">JR</div>
+              <div class="leader-name">Jamie Rivera</div>
+              <div class="leader-role">Club President</div>
+              <p class="leader-bio">A senior Animal Science major who founded the Campus Cats club after rescuing a litter of kittens near the dormitories.</p>
+              <div class="leader-quote">"Every campus cat deserves a chance at a safe and happy life."</div>
+            </div>
+            <div class="leader-card" data-index="1">
+              <div class="leader-avatar">SK</div>
+              <div class="leader-name">Sam Kim</div>
+              <div class="leader-role">Vice President</div>
+              <p class="leader-bio">Manages volunteer coordination and oversees the feeding schedule. Sam ensures every corner of campus is covered.</p>
+              <div class="leader-quote">"Teamwork makes this possible. Each volunteer makes an impact."</div>
+            </div>
+            <div class="leader-card" data-index="2">
+              <div class="leader-avatar">MP</div>
+              <div class="leader-name">Maria Perez</div>
+              <div class="leader-role">Outreach Coordinator</div>
+              <p class="leader-bio">Runs our social media and awareness campaigns. Maria connects the club with local shelters and veterinary partners.</p>
+              <div class="leader-quote">"Awareness is the first step to compassion."</div>
+            </div>
+            <div class="leader-card" data-index="3">
+              <div class="leader-avatar">AT</div>
+              <div class="leader-name">Alex Torres</div>
+              <div class="leader-role">Treasurer &amp; Fundraising Lead</div>
+              <p class="leader-bio">Keeps our finances in order and organizes fundraising events. Alex makes sure we always have resources for cat care.</p>
+              <div class="leader-quote">"Every dollar donated goes directly to the well-being of our cats."</div>
+            </div>
+          </div>
+          <div class="carousel-dots" id="carouselDots">
+            <button class="carousel-dot active" data-index="0" aria-label="Leader 1"></button>
+            <button class="carousel-dot" data-index="1" aria-label="Leader 2"></button>
+            <button class="carousel-dot" data-index="2" aria-label="Leader 3"></button>
+            <button class="carousel-dot" data-index="3" aria-label="Leader 4"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floating Cards Section (just above footer) -->
+    <section class="floating-cards-section">
+      <div class="container">
+        <div class="floating-cards-grid">
+          <div class="float-card">
+            <div class="float-card-icon">&#128049;</div>
+            <h3>15+ Cats Cared For</h3>
+            <p>We actively monitor and care for over 15 campus cats throughout the year.</p>
+          </div>
+          <div class="float-card">
+            <div class="float-card-icon">&#129657;</div>
+            <h3>TNR Program</h3>
+            <p>Trap-Neuter-Return keeps the colony healthy and population stable.</p>
+          </div>
+          <div class="float-card">
+            <div class="float-card-icon">&#128156;</div>
+            <h3>50+ Volunteers</h3>
+            <p>Our volunteer network helps with feeding, monitoring, and rescue missions.</p>
+          </div>
+          <div class="float-card">
+            <div class="float-card-icon">&#127968;</div>
+            <h3>10 Cats Adopted</h3>
+            <p>We&rsquo;ve helped 10 cats find their forever homes through our adoption program.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Made with love for our campus cats</p>
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/report.html">Report Sighting</a>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

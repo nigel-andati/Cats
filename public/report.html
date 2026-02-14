@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report - Campus Cats APA Club</title>
+  <meta name="description" content="Report a cat sighting, file a complaint, or submit a care report">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <span class="paw-icon">&#128062;</span>
+        Campus <span>Cats</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/report.html" class="active">Report</a></li>
+        <li><a href="/donate.html">Donate</a></li>
+        <li><a href="/adopt.html">Adopt</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Submit a Report</h1>
+        <p>Help us care for campus cats by reporting sightings, concerns, or care updates.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="form-card">
+          <form id="reportForm" onsubmit="return handleReport(event)">
+            <div class="form-group">
+              <label for="reportType">What would you like to do?</label>
+              <select class="form-control" id="reportType" name="reportType" required onchange="updateFormFields()">
+                <option value="">-- Select an option --</option>
+                <option value="sighting">Report a Sighting</option>
+                <option value="complaint">File a Complaint</option>
+                <option value="care">Submit a Care Report</option>
+                <option value="feeding">Report a Feeding Update</option>
+                <option value="injury">Report an Injured Cat</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div id="dynamicFields">
+              <!-- Dynamic fields appear here based on selection -->
+            </div>
+
+            <div class="form-group">
+              <label for="reportName">Your Name</label>
+              <input type="text" class="form-control" id="reportName" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="reportEmail">Email Address</label>
+              <input type="email" class="form-control" id="reportEmail" name="email" placeholder="your@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="reportLocation">Location on Campus</label>
+              <input type="text" class="form-control" id="reportLocation" name="location" placeholder="e.g., Near the library, Building C courtyard">
+            </div>
+
+            <div class="form-group">
+              <label for="reportDetails">Details</label>
+              <textarea class="form-control" id="reportDetails" name="details" placeholder="Please provide as much detail as possible..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Submit Report</button>
+          </form>
+
+          <div class="success-msg" id="reportSuccess">
+            Thank you for your report! Our team will review it and take appropriate action. We may reach out to you via email if we need more details.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Made with love for our campus cats</p>
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/report.html">Report Sighting</a>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script>
+    function updateFormFields() {
+      const type = document.getElementById('reportType').value;
+      const container = document.getElementById('dynamicFields');
+      let html = '';
+
+      switch(type) {
+        case 'sighting':
+          html = `
+            <div class="form-group">
+              <label for="catDesc">Cat Description</label>
+              <input type="text" class="form-control" id="catDesc" name="catDescription" placeholder="e.g., Orange tabby, white paws, no collar">
+            </div>
+            <div class="form-group">
+              <label for="catCount">Number of Cats Seen</label>
+              <input type="number" class="form-control" id="catCount" name="catCount" min="1" value="1">
+            </div>
+          `;
+          break;
+        case 'complaint':
+          html = `
+            <div class="form-group">
+              <label for="complaintType">Nature of Complaint</label>
+              <select class="form-control" id="complaintType" name="complaintType">
+                <option value="noise">Noise disturbance</option>
+                <option value="waste">Waste / hygiene concern</option>
+                <option value="aggression">Aggressive behavior</option>
+                <option value="property">Property damage</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          `;
+          break;
+        case 'care':
+          html = `
+            <div class="form-group">
+              <label for="catName">Cat Name (if known)</label>
+              <input type="text" class="form-control" id="catName" name="catName" placeholder="e.g., Whiskers, Luna">
+            </div>
+            <div class="form-group">
+              <label for="careAction">Care Provided</label>
+              <select class="form-control" id="careAction" name="careAction">
+                <option value="fed">Fed the cat</option>
+                <option value="water">Provided water</option>
+                <option value="shelter">Provided shelter</option>
+                <option value="firstaid">First aid / basic care</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          `;
+          break;
+        case 'feeding':
+          html = `
+            <div class="form-group">
+              <label for="feedStation">Feeding Station</label>
+              <input type="text" class="form-control" id="feedStation" name="feedStation" placeholder="e.g., Station A near Library">
+            </div>
+            <div class="form-group">
+              <label for="feedCatCount">Number of Cats Fed</label>
+              <input type="number" class="form-control" id="feedCatCount" name="catsFed" min="1" value="1">
+            </div>
+          `;
+          break;
+        case 'injury':
+          html = `
+            <div class="form-group">
+              <label for="injuryDesc">Describe the Injury</label>
+              <input type="text" class="form-control" id="injuryDesc" name="injuryDescription" placeholder="e.g., Limping on right front leg">
+            </div>
+            <div class="form-group">
+              <label for="injurySeverity">Severity</label>
+              <select class="form-control" id="injurySeverity" name="severity">
+                <option value="minor">Minor - cat seems okay</option>
+                <option value="moderate">Moderate - cat needs attention soon</option>
+                <option value="severe">Severe - urgent help needed</option>
+              </select>
+            </div>
+          `;
+          break;
+        default:
+          html = '';
+      }
+
+      container.innerHTML = html;
+    }
+
+    function handleReport(e) {
+      e.preventDefault();
+      document.getElementById('reportForm').style.display = 'none';
+      document.getElementById('reportSuccess').classList.add('show');
+      return false;
+    }
+  </script>
+</body>
+</html>

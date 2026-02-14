@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Campus Cats APA Club</title>
+  <meta name="description" content="Frequently asked questions about Campus Cats APA Club">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <span class="paw-icon">&#128062;</span>
+        Campus <span>Cats</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/report.html">Report</a></li>
+        <li><a href="/donate.html">Donate</a></li>
+        <li><a href="/adopt.html">Adopt</a></li>
+        <li><a href="/faq.html" class="active">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <p>Got questions? We have answers. Here are the most common things people ask about Campus Cats.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              What is the Campus Cats APA Club?
+              <span class="arrow">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                We are a student-run Animal Protection Association club dedicated to the welfare of stray and community cats on campus. We provide food, medical care, shelter, and work toward humane population management through our TNR (Trap-Neuter-Return) program.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              How can I volunteer?
+              <span class="arrow">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                We are always looking for volunteers! You can help with daily feeding shifts, cat monitoring, event planning, social media, and more. Reach out through our <a href="/report.html">report page</a> or contact us at our next campus meeting. No prior experience is necessary &mdash; just a love for cats!
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Are the campus cats safe to interact with?
+              <span class="arrow">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Most of our campus cats are friendly and used to human interaction. However, we recommend approaching them calmly and letting them come to you. Some cats may be more shy or wary. All cats in our program are vaccinated and monitored for health issues. If you encounter a cat that appears sick or aggressive, please <a href="/report.html">report it</a> to us immediately.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              What is TNR and why do you do it?
+              <span class="arrow">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                TNR stands for Trap-Neuter-Return. It is the most humane and effective method for managing community cat populations. We humanely trap cats, have them spayed or neutered by a veterinarian, and return them to their territory. This prevents new litters while allowing the existing cats to live out their lives in their familiar environment. Over time, the colony size naturally stabilizes and decreases.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Can I adopt a campus cat?
+              <span class="arrow">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes! Some of our campus cats are friendly enough for indoor home life and are available for adoption. Visit our <a href="/adopt.html">Adopt page</a> to see cats currently available and to submit an adoption application. Each cat is health-checked, vaccinated, and spayed/neutered before going to their new home.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              How are donations used?
+              <span class="arrow">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                100% of donations go directly to cat care. This includes cat food, veterinary bills (routine check-ups, vaccinations, emergency care), TNR procedures, feeding station supplies, and shelter materials. We maintain transparent records and provide regular updates to our donors. Visit our <a href="/donate.html">Donate page</a> to contribute.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              I found a sick or injured cat on campus. What should I do?
+              <span class="arrow">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Please <a href="/report.html">submit a report</a> immediately with the location and description of the cat. Select "Report an Injured Cat" from the dropdown menu. If the situation appears life-threatening, note the urgency in your report. Our response team will prioritize critical cases and arrange for veterinary care as quickly as possible.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              How often are the cats fed?
+              <span class="arrow">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Our volunteers maintain a daily feeding schedule, with cats being fed twice a day &mdash; once in the morning and once in the evening. We have designated feeding stations across campus, and each station is assigned to specific volunteers who ensure fresh food and water are always available.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Can I bring my own food to feed the cats?
+              <span class="arrow">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                We appreciate the thought, but we ask that you do not feed the cats outside of our organized feeding program. Some cats have dietary restrictions or health conditions, and uncontrolled feeding can lead to overfeeding, attract pests, and make it difficult to monitor each cat&rsquo;s health. If you would like to contribute food, you can donate supplies through our <a href="/donate.html">donation page</a>.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Made with love for our campus cats</p>
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/report.html">Report Sighting</a>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script>
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const wasOpen = item.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      // Toggle current
+      if (!wasOpen) {
+        item.classList.add('open');
+      }
+    }
+  </script>
+</body>
+</html>
